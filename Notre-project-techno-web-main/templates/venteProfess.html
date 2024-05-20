@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="margin-left: 20%; margin-top: 3%;">Donnez-nous déjà des informations sur votre véhicule</h1>
+<div class="form-group"></div>
+    <form action="/vente/professionnel" method="post" class="decalageplus border border-warning" style="padding: 1%;">
+        
+
+      <div class="form-group">
+        <label for="marque">Marque du véhicule</label>
+        <select style = "margin-top : 10px ;" class="form-control" id="marque" name="marque">
+          <optgroup label="Choississez une marque"></optgroup>
+          <option>Aucune de ces marques</option>
+          <optgroup label="Marques disponibles"></optgroup>
+          <option>Alfa Romeo</option> <option>Audi</option> <option>BMW</option>
+          <option>Bugatti</option><option>Citroën</option> <option>Dacia</option>
+          <option>Ferrari</option><option>Fiat</option><option>Ford</option>
+          <option>Harley Davidson</option> <option>Honda</option> <option>Hyundai</option>
+          <option>Jaguar</option> <option>Lamborghini</option><option>Lexus</option>
+          <option>McLaren</option> <option>Mercedes-Benz</option> <option>Nissan</option>
+          <option>Opel</option> <option>Peugeot</option> <option>Porsche</option>
+          <option>Suzuki</option> <option>Tesla</option> <option>Maserati</option>
+          <option>Toyota</option> <option>Volkswagen (DAS AUTO)</option> <option>Volvo</option>                  
+        </select>
+    
+    <div style = "margin-top : 13px ;" >
+      Modèle
+      
+      <input style = "margin-top : 13px ;" type="text" class="form-control" name ="model" placeholder="Modèle" id="model" value="">
+    </div>
+
+        <label for="adress" class="my-3">Adresse de retrait</label>
+        <input type="text" class="form-control" id="adress" name="adress" placeholder="Adresse " value="" />
+
+        <label for="kilometrage" class="my-3">Kilométrage</label>
+        <input type="text" class="form-control" id="kilometrage" name="kilometrage" placeholder="Kilométrage " value="" />
+        
+        <label for="annee" class="my-3">Année de mise en circulation</label>
+        <input type="text" class="form-control" id="annee" name="annee" placeholder="Année" value="" />
+
+        <label for="degats" class="my-3">Dégats éventuels</label>
+        <input type="textarea" class="form-control" id="degats" name="degats" placeholder="Aucun" value="" />
+          
+        <div class="form-group">
+            <label for="image">Upload des photos du véhicule</label>
+            <input type="file" class="form-control-file" id="image">
+        </div>    
+    </form>
+</div>
+{% endblock %}
